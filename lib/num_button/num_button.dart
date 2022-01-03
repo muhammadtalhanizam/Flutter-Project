@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class numButton extends StatelessWidget {
   final String text;
-  //final int fillColors;
 
   const numButton({Key? key, required this.text}) : super(key: key);
 
@@ -15,12 +14,12 @@ class numButton extends StatelessWidget {
           child: ElevatedButton(
             child: Text(
               text,
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blueAccent),
             ),
             onPressed: () {},
-            //style: ButtonStyle(
-            //foregroundColor: Colors(0xFF0000),
-            //    ),
             style: ElevatedButton.styleFrom(
                 primary: Colors.white,
                 onPrimary: Colors.black,
@@ -31,17 +30,5 @@ class numButton extends StatelessWidget {
         ),
       ),
     );
-
-    /*child: SizedBox(
-            width: 65,
-            height: 65,
-            child: CircleAvatar(
-              onPressed: () {},
-              backgroundColor: Color(0xff4c505b),
-
-              radius: 30,
-              child: Text(text),
-              //color: Colors.blueGrey,
-            ))*/
   }
 }
